@@ -2,71 +2,101 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Formulaire TP HTML/CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire - TP HTML/CSS</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Formulaire TP HTML/CSS</h1>
+        <h1>TP HTML/CSS</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
-                <li><a href="formulaire.html">Formulaire</a></li>
+                <li><a href="formulaire.html" class="active">Formulaire</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form action="#" method="post">
+        <h2>Formulaire de contact</h2>
+        <p>Tous les champs marqués d'un astérisque (*) sont obligatoires.</p>
+
+        <form action="confirmation.html" method="GET" class="form-container">
+            <!-- Champ texte -->
             <div class="form-group">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required>
+                <label for="nom">Nom complet *</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
             </div>
 
+            <!-- Champ email -->
             <div class="form-group">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Adresse email *</label>
+                <input type="email" id="email" name="email" placeholder="exemple@domaine.fr" required>
             </div>
 
+            <!-- Champ numérique -->
             <div class="form-group">
-                <label for="age">Âge :</label>
-                <input type="number" id="age" name="age" required>
+                <label for="age">Âge</label>
+                <input type="number" id="age" name="age" min="1" max="120" placeholder="Votre âge">
             </div>
 
+            <!-- Liste déroulante -->
             <div class="form-group">
-                <label for="pays">Pays :</label>
+                <label for="pays">Pays de résidence *</label>
                 <select id="pays" name="pays" required>
-                    <option value="">Sélectionnez</option>
-                    <option value="maroc">Maroc</option>
+                    <option value="">-- Sélectionnez un pays --</option>
                     <option value="france">France</option>
-                    <option value="espagne">Espagne</option>
+                    <option value="belgique">Belgique</option>
+                    <option value="suisse">Suisse</option>
+                    <option value="canada">Canada</option>
+                    <option value="autre">Autre</option>
                 </select>
             </div>
 
+            <!-- Groupe radio -->
             <div class="form-group">
-                <p>Sexe :</p>
-                <input type="radio" id="homme" name="sexe" value="homme" required>
-                <label for="homme">Homme</label>
-                <input type="radio" id="femme" name="sexe" value="femme">
-                <label for="femme">Femme</label>
+                <span class="label-like">Comment nous avez-vous connu ? *</span>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" id="reseau" name="source" value="reseau" required>
+                        <label for="reseau">Réseaux sociaux</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="amis" name="source" value="amis">
+                        <label for="amis">Bouche à oreille</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="recherche" name="source" value="recherche">
+                        <label for="recherche">Moteur de recherche</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="autre" name="source" value="autre">
+                        <label for="autre">Autre</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <input type="checkbox" id="newsletter" name="newsletter">
+            <!-- Case à cocher -->
+            <div class="form-group checkbox">
+                <input type="checkbox" id="newsletter" name="newsletter" value="oui">
                 <label for="newsletter">Je souhaite recevoir la newsletter</label>
             </div>
 
+            <!-- Zone textarea -->
             <div class="form-group">
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Votre message *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Saisissez votre message ici..." required></textarea>
             </div>
 
-            <button type="submit">Envoyer</button>
+            <!-- Bouton submit -->
+            <div class="form-group">
+                <button type="submit" class="btn">Envoyer le formulaire</button>
+            </div>
         </form>
     </main>
 
     <footer>
-        <p>© 2026 TP HTML/CSS</p>
+        <p>&copy; 2024 - TP HTML/CSS - Tous droits réservés</p>
     </footer>
 </body>
 </html>

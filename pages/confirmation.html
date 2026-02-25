@@ -2,12 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - TP HTML/CSS</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Confirmation du formulaire</h1>
+        <h1>TP HTML/CSS</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
@@ -17,14 +18,25 @@
     </header>
 
     <main>
-        <section>
-            <h2>Merci pour votre envoi !</h2>
-            <p>Vos informations ont été reçues. (Page statique pour l'instant)</p>
+        <section class="confirmation">
+            <h2>Formulaire envoyé avec succès !</h2>
+            <div class="message-succes">
+                <p>Merci d'avoir rempli le formulaire. Voici un récapitulatif des informations que vous avez fournies :</p>
+            </div>
+            
+            <div class="recap">
+                <p><strong>Note :</strong> Cette page est actuellement statique. Elle sera dynamisée avec PHP pour afficher les données du formulaire.</p>
+            </div>
+
+            <div class="actions">
+                <a href="../index.html" class="btn">Retour à l'accueil</a>
+                <a href="formulaire.html" class="btn">Nouveau formulaire</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 TP HTML/CSS</p>
+        <p>&copy; 2024 - TP HTML/CSS - Tous droits réservés</p>
     </footer>
 </body>
 </html>

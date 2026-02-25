@@ -2,30 +2,45 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil TP HTML/CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - TP HTML/CSS</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon TP HTML/CSS</h1>
+        <h1>TP HTML/CSS</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="pages/formulaire.html">Formulaire</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <section>
-            <h2>Présentation du projet</h2>
-            <p>Ce TP consiste à créer une interface web en HTML/CSS qui servira de base pour les futurs TP PHP.</p>
-            <p>Vous trouverez un formulaire fonctionnel et une page de confirmation statique.</p>
+        <section class="intro">
+            <h2>Bienvenue sur le TP</h2>
+            <p>Ce projet sert de base pour les futurs TP PHP. Il contient une structure HTML sémantique et un formulaire complet.</p>
         </section>
+
+        <section class="objectifs">
+            <h2>Objectifs du projet</h2>
+            <ul>
+                <li>Structure HTML sémantique</li>
+                <li>Formulaire complet avec labels et champs variés</li>
+                <li>CSS propre et organisé</li>
+                <li>Navigation fonctionnelle</li>
+            </ul>
+        </section>
+
+        <article class="info">
+            <h3>À propos</h3>
+            <p>Ce template servira pour les exercices de programmation PHP (traitement de formulaires, sessions, etc.)</p>
+        </article>
     </main>
-    
+
     <footer>
-        <p>© 2026 TP HTML/CSS - Tous droits réservés</p>
+        <p>&copy; 2026 - TP HTML/CSS - Tous droits réservés</p>
     </footer>
 </body>
 </html>
