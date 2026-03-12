@@ -1,15 +1,14 @@
 /* ===== VARIABLES ET RESET ===== */
 :root {
-    --primary-color: #2c3e50;           /* Bleu foncé pour les textes */
-    --secondary-color: #a7c7e7;          /* Baby blue / Bleu pastel */
-    --accent-color: #fff9e6;              /* Baby yellow / Jaune pastel */
-    --light-bg: #f8f9fa;                   /* Fond très clair */
-    --text-color: #4a4a4a;                  /* Gris doux pour le texte */
-    --border-color: #dde0e5;                /* Bordure discrète */
+    --baby-blue: #add8e6;        /* Baby blue classique */
+    --burgundy: #800020;          /* Bordeaux foncé */
+    --light-bg: #f5f5f5;          /* Fond gris très clair */
+    --white: #ffffff;              /* Blanc */
+    --text: #333333;               /* Gris foncé */
+    --border: #dddddd;             /* Gris bordure */
     --max-width: 1200px;
     --spacing: 20px;
-    --baby-yellow: #fef7d5;                  /* Jaune baby / pastel */
-    --baby-blue: #d4e4fc;                     /* Bleu baby / pastel */
+    --radius: 5px;                 /* Bordures légèrement arrondies */
 }
 
 * {
@@ -19,10 +18,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: #faf9f7;
+    color: var(--text);
+    background-color: var(--light-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,18 +30,15 @@ body {
 /* ===== HEADER ET NAVIGATION ===== */
 header {
     background-color: var(--baby-blue);
-    color: var(--primary-color);
     padding: var(--spacing);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-    border-bottom: 2px solid var(--baby-yellow);
+    border-bottom: 3px solid var(--burgundy);
 }
 
 header h1 {
+    font-size: 2rem;
+    color: var(--burgundy);
     margin-bottom: 10px;
-    font-size: 2em;
-    color: #2c3e50;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-weight: normal;
 }
 
 nav ul {
@@ -52,55 +48,53 @@ nav ul {
 }
 
 nav a {
-    color: var(--primary-color);
+    color: var(--text);
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.3);
-    font-weight: 500;
+    padding: 5px 10px;
+    transition: all 0.3s;
 }
 
 nav a:hover {
-    background-color: var(--baby-yellow);
-    transform: translateY(-2px);
+    color: var(--burgundy);
+    background-color: var(--white);
+    border-radius: var(--radius);
 }
 
 nav a.active {
-    background-color: var(--baby-yellow);
-    font-weight: 600;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    color: var(--burgundy);
+    font-weight: bold;
+    border-bottom: 2px solid var(--burgundy);
 }
 
 /* ===== MAIN CONTENT ===== */
 main {
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: var(--spacing);
+    margin: 20px auto;
+    padding: 0 var(--spacing);
     flex: 1;
     width: 100%;
 }
 
 h1, h2, h3 {
+    color: var(--burgundy);
     margin-bottom: 15px;
-    color: var(--primary-color);
-    font-weight: 400;
+    font-weight: normal;
 }
 
 h2 {
-    border-bottom: 2px solid var(--baby-yellow);
-    padding-bottom: 10px;
-    display: inline-block;
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--baby-blue);
+    padding-bottom: 5px;
 }
 
 /* ===== SECTIONS ET ARTICLES ===== */
 section, article {
-    margin-bottom: 30px;
+    background: var(--white);
     padding: var(--spacing);
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.02);
-    border: 1px solid #f0f0f0;
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(128, 0, 32, 0.1);
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
 }
 
 /* ===== LISTES ===== */
@@ -110,57 +104,42 @@ ul, ol {
 }
 
 li {
-    margin-bottom: 8px;
-    color: #5a5a5a;
+    margin-bottom: 5px;
 }
 
 /* ===== FORMULAIRE ===== */
 .form-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-    border: 1px solid #f5f5f5;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .form-group label,
 .label-like {
     display: block;
-    margin-bottom: 8px;
-    color: var(--primary-color);
-    font-weight: 500;
-    font-size: 0.95em;
-    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+    color: var(--burgundy);
+    font-weight: bold;
 }
 
-/* Champs de formulaire - Style plus calme */
+/* Champs de formulaire */
 input[type="text"],
 input[type="email"],
 input[type="number"],
 select,
 textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    font-size: 15px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
     font-family: inherit;
-    background-color: var(--light-bg);
-    transition: all 0.3s ease;
-    color: var(--text-color);
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="number"]:hover,
-select:hover,
-textarea:hover {
-    background-color: #ffffff;
-    border-color: var(--baby-blue);
+    transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
@@ -169,125 +148,108 @@ input[type="number"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--baby-blue);
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(167, 199, 231, 0.1);
+    border-color: var(--burgundy);
 }
 
-/* Radio buttons - Style plus doux */
+/* Radio buttons */
 .radio-group {
-    margin-top: 8px;
-    background-color: var(--light-bg);
-    padding: 15px;
-    border-radius: 12px;
+    margin-top: 5px;
 }
 
 .radio-group div {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 12px;
-    width: 18px;
-    height: 18px;
-    accent-color: var(--baby-blue);
-    cursor: pointer;
+    margin-right: 8px;
+    accent-color: var(--burgundy);
 }
 
 .radio-group label {
     display: inline;
     font-weight: normal;
-    margin-bottom: 0;
-    cursor: pointer;
+    color: var(--text);
 }
 
-/* Checkbox - Style plus doux */
+/* Checkbox */
 .form-group.checkbox {
     display: flex;
     align-items: center;
-    gap: 12px;
-    background-color: var(--baby-yellow);
-    padding: 15px 20px;
-    border-radius: 12px;
-    margin-top: 20px;
+    gap: 8px;
+    background: var(--baby-blue);
+    padding: 10px;
+    border-radius: var(--radius);
 }
 
 .form-group.checkbox input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    accent-color: var(--baby-blue);
-    cursor: pointer;
+    accent-color: var(--burgundy);
 }
 
 .form-group.checkbox label {
     margin-bottom: 0;
     font-weight: normal;
-    cursor: pointer;
+    color: var(--text);
 }
 
-/* Bouton - Style pastel */
+/* Bouton */
 .btn {
-    background: linear-gradient(145deg, var(--baby-blue), #b8d4f0);
-    color: var(--primary-color);
-    padding: 14px 28px;
+    background-color: var(--burgundy);
+    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 500;
+    border-radius: var(--radius);
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(167, 199, 231, 0.2);
-    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background: linear-gradient(145deg, var(--baby-yellow), #fef0c0);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(254, 247, 213, 0.3);
+    background-color: #600018;  /* Burgundy plus foncé */
 }
 
 /* ===== PAGE CONFIRMATION ===== */
 .confirmation {
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .message-succes {
-    background-color: var(--baby-yellow);
-    border: 1px solid #fff0c0;
-    color: var(--primary-color);
+    background-color: var(--baby-blue);
+    color: var(--burgundy);
     padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    border: 1px solid var(--burgundy);
 }
 
 .recap {
-    background: linear-gradient(145deg, var(--light-bg), #ffffff);
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    border: 1px solid #f0e6d0;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
 }
 
 .actions {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 /* ===== FOOTER ===== */
 footer {
     background-color: var(--baby-blue);
-    color: var(--primary-color);
+    color: var(--burgundy);
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     margin-top: auto;
-    font-size: 0.9em;
-    border-top: 2px solid var(--baby-yellow);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--burgundy);
 }
 
 /* ===== UTILITAIRES ===== */
@@ -299,24 +261,18 @@ footer {
     margin-top: 20px;
 }
 
-/* Style pour le select */
+/* Style select */
 select {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23800020'%3e%3cpolygon points='12 17 6 11 18 11'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 15px;
-    cursor: pointer;
+    background-position: right 8px center;
+    background-size: 12px;
+    appearance: none;
 }
 
-/* Style pour le textarea */
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-/* Message d'erreur/obligatoire */
+/* Required star */
 .required-star {
-    color: #e6b800;
-    margin-left: 3px;
+    color: var(--burgundy);
+    margin-left: 
+    3px;
 }
