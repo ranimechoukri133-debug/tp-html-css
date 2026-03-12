@@ -17,6 +17,7 @@
 <li><a href="pages/formulaire.html">Formulaire</a></li>
 <li><a href="eau.php">Eau</a></li>
 <li><a href="multiplication.php" class="active">Multiplication</a></li>
+<li><a href="multiplications.php">Multiplications</a></li>
 <li><a href="mois.php">Mois</a></li>
 </ul>
 </nav>

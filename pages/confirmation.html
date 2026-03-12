@@ -6,37 +6,57 @@
     <title>Confirmation - TP HTML/CSS</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>TP HTML/CSS</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="formulaire.html">Formulaire</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="confirmation">
-            <h2>Formulaire envoyé avec succès !</h2>
-            <div class="message-succes">
-                <p>Merci d'avoir rempli le formulaire. Voici un récapitulatif des informations que vous avez fournies :</p>
-            </div>
-            
-            <div class="recap">
-                <p><strong>Note :</strong> Cette page est actuellement statique. Elle sera dynamisée avec PHP pour afficher les données du formulaire.</p>
-            </div>
+<header>
+    <h1>TP HTML/CSS</h1>
 
-            <div class="actions">
-                <a href="../index.html" class="btn">Retour à l'accueil</a>
-                <a href="formulaire.html" class="btn">Nouveau formulaire</a>
-            </div>
-        </section>
-    </main>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="formulaire.html" class="active">Formulaire</a></li>
+            <li><a href="../eau.php">Eau</a></li>
+            <li><a href="../multiplication.php">Multiplication</a></li>
+            <li><a href="../multiplications.php">Multiplications</a></li>
+            <li><a href="../mois.php">Mois</a></li>
+        </ul>
+    </nav>
 
-    <footer>
-        <p>&copy; 2024 - TP HTML/CSS - Tous droits réservés</p>
-    </footer>
+</header>
+
+<main>
+
+<section class="confirmation">
+
+    <h2>Formulaire envoyé avec succès !</h2>
+
+    <div class="message-succes">
+        <p>
+            Merci d'avoir rempli le formulaire.  
+            Voici un récapitulatif des informations que vous avez fournies.
+        </p>
+    </div>
+
+    <div class="recap">
+        <p>
+            <strong>Note :</strong> Cette page est actuellement statique.  
+            Elle pourra être dynamisée avec PHP pour afficher les données du formulaire.
+        </p>
+    </div>
+
+    <div class="actions">
+        <a href="../index.html" class="btn">Retour à l'accueil</a>
+        <a href="formulaire.html" class="btn">Remplir un nouveau formulaire</a>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 - TP HTML/CSS - Tous droits réservés</p>
+</footer>
+
 </body>
 </html>

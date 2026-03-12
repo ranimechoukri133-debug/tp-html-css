@@ -41,7 +41,7 @@ for($n = 1; $n <= 10; $n++){
         echo "$i x $n = $produit <br>";
     }
 
-    echo "<br>";
+    echo "<hr>";
 
 }
 
